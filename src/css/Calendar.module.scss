@@ -1,0 +1,20 @@
+@import '../sass/mixins';
+@import '../sass/variables';
+
+.Calendar {
+    display: block;
+    max-width: 60rem;
+    max-height: 40rem;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+
+    &_dates {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, (100% / 7));
+        grid-template-rows: repeat(4, auto-fit);
+        grid-auto-flow: row dense;
+    }
+}

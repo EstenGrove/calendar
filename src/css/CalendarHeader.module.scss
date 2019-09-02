@@ -1,0 +1,62 @@
+@import '../sass/layout';
+@import '../sass/variables';
+@import '../sass/mixins';
+@import '../sass/utilities';
+
+
+.CalendarHeader {
+    max-width: 100%;
+    height: 6rem;
+    border-bottom: 1px solid #ccc;
+    border-radius: .5rem .5rem 0 0;
+    background-color: map-get($map: $colors, $key: 'mainCharcoal');
+
+
+    &_inner {
+        width: 100%;
+        height: 100%;
+        @include row_between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+    }
+
+    &_inner_month {
+        font-size: 2rem;
+        color: #eee;
+    }
+
+    &_inner_arrow {
+        width: 2rem;
+        height: 2rem;
+        fill: #eee;
+
+        &:hover {
+            fill: map-get($map: $colors, $key: 'main');
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .CalendarHeader {
+
+
+        &_inner_month {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .CalendarHeader {
+
+
+        &_inner_month {
+            font-size: 1.5rem;
+        }
+    }
+}

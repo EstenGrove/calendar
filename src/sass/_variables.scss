@@ -1,0 +1,58 @@
+$primary_font: 'Open Sans',
+sans-serif;
+$primary_serif: 'Lora',
+serif;
+$primary_mono: 'Consolas',
+monospace;
+
+$blue: hsla(197, 100%, 50%, 1);
+$red: hsla(352, 70%, 50%, 1);
+$purple: hsla(222, 89%, 64%, 1);
+$green: hsla(170, 100%, 39%, 1);
+$charcoal: hsla(268, 10%, 30%, 1);
+$deepPurple: hsla(240, 68%, 62%, 1);
+$orange: hsla(11, 100%, 75%, 1);
+$yellow: hsla(60, 92%, 71%, 1);
+$grey: hsla(216, 14%, 93%, 1);
+
+// FLAT VERSIONS
+$flatBlue: hsla(197, 100%, 50%, .3);
+$flatPurple: hsla(222, 89%, 64%, .3);
+$flatAltPurple: hsla(259, 77%, 64%, .4);
+$flatGreen: hsla(144, 69%, 63%, .4);
+$flatSmoke: hsla(268, 10%, 30%, .4);
+$flatRed: hsla(330, 100%, 41%, .22);
+$flatYellow: hsla(60, 92%, 71%, .7);
+$flatOrange: hsla(11, 100%, 75%, .4);
+
+$bgColors: (mainBlack: #191919,
+    mainCharcoal: #3f3a40,
+    mainLightGrey: #66615d,
+    mainBlueGrey: #425067,
+    mainDark: hsla(0, 0%, 10%, .2),
+);
+
+$light_shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.25);
+$medium_shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+0 3px 6px rgba(0, 0, 0, 0.23);
+$heavy_shadow: 3px 4px 16px -1px rgba(0, 0, 0, 0.75);
+
+$colors: (main: $deepPurple,
+    mainBlue: $blue,
+    mainRed: $red,
+    mainGreen: $green,
+    mainOrange: $orange,
+    mainYellow: $yellow,
+    mainCharcoal: $charcoal,
+    mainGrey: $grey,
+);
+
+$shadows: (light: $light_shadow,
+    medium: $medium_shadow,
+    heavy: $heavy_shadow,
+);
+
+$fonts: (mainSans: $primary_font,
+    mainSerif: $primary_serif,
+    mainMono: $primary_mono,
+)
