@@ -3,6 +3,7 @@ import styles from "../css/Calendar.module.scss";
 import CalendarHeader from "./CalendarHeader";
 import CalendarWeekHeader from "./CalendarWeekHeader";
 import Days from "./Days";
+import FirstDayOfMonth from "./FirstDayOfMonth";
 import { format } from "date-fns";
 import { useDates, dateFormatting } from "../utils/useDates";
 
@@ -59,9 +60,14 @@ const Calendar = () => {
       />
       <CalendarWeekHeader />
       <section className={styles.Calendar_dates}>
-        {activeDays.map((day, index) => (
-          <Days day={day} start={dateReducer(start)} />
-        ))}
+        {/* <Days day={day} start={dateReducer(start)} /> */}
+        {activeDays.map((day, index) =>
+          index === 0 ? (
+            <FirstDayOfMonth start={dateReducer(start)} />
+          ) : (
+            <Days day={day} />
+          )
+        )}
       </section>
     </div>
   );
