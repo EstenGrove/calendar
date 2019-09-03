@@ -1,0 +1,81 @@
+@import '../sass/mixins';
+@import '../sass/variables';
+
+.AppNav {
+    max-width: 100vw;
+    height: 3.5rem;
+    padding: .5rem;
+    background-color: $flatSmoke;
+    -webkit-box-shadow: map-get($map: $shadows, $key: 'light');
+    box-shadow: map-get($map: $shadows, $key: 'light');
+    @include row_vertical_center;
+
+    &_icon {
+        width: 2rem;
+        height: 2rem;
+        fill: map-get($map: $colors, $key: 'main');
+        opacity: .8;
+    }
+
+    &_today {
+        width: 12%;
+        height: 100%;
+        @include row_between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: 1rem;
+
+        &_label {
+            color: #eee;
+            opacity: .8;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        &_arrows {
+            width: 100%;
+            @include row_evenly;
+        }
+
+        &_arrows_arrow {
+            width: .8rem;
+            height: .8rem;
+            fill: map-get($map: $colors, $key: 'main');
+        }
+    }
+
+    &_views {
+        width: 20rem;
+        height: 100%;
+        @include row_vertical_center;
+        margin-left: auto;
+        margin-right: auto;
+
+        &_btn {
+            padding: .5rem 1.6rem;
+            background-color: map-get($map: $colors, $key: 'mainBlue');
+            font-size: .8rem;
+            font-weight: bold;
+            @include rounded;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:nth-child(1) {
+                border-radius: .5rem 0 0 .5rem;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0;
+                border-left: 1px solid #333;
+                border-right: 1px solid #333;
+            }
+
+            &:nth-child(3) {
+                border-radius: 0 .5rem .5rem 0;
+            }
+        }
+    }
+}

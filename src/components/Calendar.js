@@ -27,18 +27,16 @@ const Calendar = () => {
   }, [currentDaysInMonth, start]);
 
   function dateReducer(beginning) {
-    console.log(beginning);
-
     switch (true) {
       case beginning.includes("Sun"):
         return 1;
       case beginning.includes("Mon"):
         return 2;
-      case beginning.includes("Tues"):
+      case beginning.includes("Tue"):
         return 3;
       case beginning.includes("Wed"):
         return 4;
-      case beginning.includes("Thurs"):
+      case beginning.includes("Thu"):
         return 5;
       case beginning.includes("Fri"):
         return 6;
@@ -48,8 +46,6 @@ const Calendar = () => {
         return new Error("No match was found. Check your logic, bitch!");
     }
   }
-
-  console.log(dateReducer(start));
 
   return (
     <div className={styles.Calendar}>

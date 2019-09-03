@@ -8,6 +8,9 @@
     height: 5rem;
     border: 1px solid hsla(0, 0%, 93%, .2);
     background-color: $flatSmoke;
+    -webkit-transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 
     &_day {
         padding: .5rem;
@@ -15,6 +18,34 @@
 
     &:nth-child(1) {
         grid-column-start: 3;
+    }
+
+    &_tasks {
+        width: 40%;
+        max-height: 100%;
+        height: auto;
+        padding: .5rem;
+        @include col_between_end;
+
+    }
+
+    &_tasks_item {
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        // background-color: $flatBlue;
+        background-color: map-get($map: $colors, $key: 'mainGreen');
+
+
+        &:nth-child(2) {
+            // background-color: $flatGreen;
+            background-color: map-get($map: $colors, $key: 'main');
+        }
+
+        &:nth-child(3) {
+            // background-color: $flatRed;
+            background-color: map-get($map: $colors, $key: 'mainRed');
+        }
     }
 }
 
